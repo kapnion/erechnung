@@ -1,0 +1,24 @@
+<div class="xslt-transformer">
+    <h2>XML to HTML Transformer</h2>
+  
+    <!-- XML file upload -->
+    <div>
+      <label for="xml-file">Upload XML File:</label>
+      <input type="file" id="xml-file" (change)="onXmlFileSelected($event)" accept=".xml" />
+    </div>
+  
+    <!-- XSLT file upload -->
+    <div>
+      <label for="xslt-file">Upload XSLT File:</label>
+      <input type="file" id="xslt-file" (change)="onXsltFileSelected($event)" accept=".xslt, .xml" />
+    </div>
+  
+    <!-- Transform button -->
+    <div>
+      <button (click)="transform()">Transform</button>
+    </div>
+  
+    <!-- Display the transformed HTML -->
+    <div class="transformed-html" [innerHTML]="transformedHtml"></div>
+  </div>
+  
